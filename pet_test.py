@@ -6,13 +6,14 @@ import pet
 def main():
     # Create an empty list.
     pets = make_list()
+    print('')
     print('Here are the pets you listed: ')
     display_list(pets)
 
 
 def make_list():
     pet_list = []
-    for count in range(1, 3):
+    for count in range(1, 2):
         name = input("Enter your pet's name: ")
         animal_type = input("What pet_type of pet is it: ")
         age = int(input('Enter the age of your pet: '))
@@ -28,7 +29,6 @@ def display_list(pet_list):
         print(item.get_name())
         print(item.get_animal_type())
         print(item.get_age())
-        print()
 
 
 main()
