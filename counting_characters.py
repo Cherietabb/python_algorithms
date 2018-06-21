@@ -1,7 +1,8 @@
 # This program counts the number of times the letter T
 # (uppercase or lowercase) appears in a string.
 
-def main():
+
+def count_string():
     # Creat a variable to hold the number.
     count = 0
 
@@ -14,5 +15,11 @@ def main():
             count += 1
     print('The letter T appears', count, 'times.')
 
+
 # Call the main function.
-main()
+def main():
+    count_string()
+
+
+if __name__ == "__main__":
+    main()

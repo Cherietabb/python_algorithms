@@ -8,7 +8,18 @@ INCHES_TO_CENTIMETERS_CHOICE = 5
 QUIT_CHOICE = 6
 
 
+def display_menu():
+    print('         MENU')
+    print('1) Miles to kilometers')
+    print('2) Fahrenheit to celsius')
+    print('3) Gallons to liters')
+    print('4) Pounds to kilograms')
+    print('5) Inches to centimeters')
+    print('6) Quit')
+
+
 def main():
+
     # Open a file.
     conversions = open('Conversions.txt', 'w')
     conversions.write('Here are some conversions:\n')
@@ -95,7 +106,7 @@ def main():
             choice = 0
             for count in range(0, choice + 10):
                 try:
-                    inches = int(input('Enter a number of inches: '))
+                    inches = int(input('Enter a number for inches: '))
                     centimeters = my_conversions.convert_centimeters(inches)
                     if inches < 0:
                         print('Please enter a number greater than zero!')
@@ -115,14 +126,5 @@ def main():
     conversions.close()
 
 
-def display_menu():
-    print('         MENU')
-    print('1) Miles to kilometers')
-    print('2) Fahrenheit to celsius')
-    print('3) Gallons to liters')
-    print('4) Pounds to kilograms')
-    print('5) Inches to centimeters')
-    print('6) Quit')
-
-
-main()
+if __name__ == "__main__":
+    main()

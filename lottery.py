@@ -1,9 +1,12 @@
 # Lottery number Generator.
 
 import random
+
 # Constant
 NUM = 7
-def main():    
+
+
+def get_lottery_numbers():
     # Create empty list to hold numbers.
     lottery_numbers = [0] * NUM
     index = 0
@@ -15,8 +18,15 @@ def main():
     print('-----------------------')
     display_list(lottery_numbers)
 
+
 def display_list(lottery_numbers):
     for value in lottery_numbers:
         print(value)
 
-main()
+
+def main():
+    get_lottery_numbers()
+
+
+if __name__ == "__main__":
+    main()
