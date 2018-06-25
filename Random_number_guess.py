@@ -2,7 +2,7 @@
 import random
 
 
-def main():
+def guess_random_number():
     number = random.randint(1, 1000)
     play_again = 'y'
     tries = 0
@@ -11,7 +11,7 @@ def main():
         guess = int(input('Guess a number between 1 and 1000: '))
         tries += 1
         if guess > number:
-            if guess - number < 10:
+            if guess - number <= 10:
                 print('Getting warmer, but still too high!')
             else:
                 print('Too high!')
@@ -27,4 +27,9 @@ def main():
         print("Thank you for playing. Goodbye!")
 
 
-main()
+def main():
+    guess_random_number()
+
+
+if __name__ == "__main__":
+    main()

@@ -3,14 +3,6 @@ __author__ = 'Cherie Tabb'
 import pet
 
 
-def main():
-    # Create an empty list.
-    pets = make_list()
-    print('')
-    print('Here are the pets you listed: ')
-    display_list(pets)
-
-
 def make_list():
     pet_list = []
     for count in range(1, 2):
@@ -31,4 +23,13 @@ def display_list(pet_list):
         print(item.get_age())
 
 
-main()
+def main():
+    # Create an empty list.
+    pets = make_list()
+    print('')
+    print('Here are the pets you listed: ')
+    display_list(pets)
+
+
+if __name__ == "__main__":
+    main()

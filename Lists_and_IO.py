@@ -3,7 +3,17 @@
 NUM_STUDENTS = 3
 
 
+# Add student names to a list.
+def get_names(students):
+    for index in range(NUM_STUDENTS):
+        # Get input from user.
+        name = input('Enter student name: ')
+        students[index] = name
+        index += 1
+
+
 def main():
+
     studentlist = open('names.txt', 'w')
     studentlist.write('Student names\n')
     studentlist.write('----------------\n')
@@ -46,14 +56,5 @@ def main():
     print('New items saved to file')
 
     
-# Add student names to a list.
-def get_names(students):
-    for index in range(NUM_STUDENTS):
-        # Get input from user.
-        name = input('Enter student name: ')
-        students[index] = name
-        index += 1
-
-
 # Call the main function.
 main()
