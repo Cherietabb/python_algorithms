@@ -2,24 +2,9 @@
 
 import my_conversions
 
-# Explain what the program does.
-def main():
-    print("This program converts units.")
-    print("Please enter a number to be converted.")
-    if not MilesToKm():
-        return False
-    if not FahToCel():
-        return False
-    if not GalToLit():
-        return False
-    if not PoundsToKg():
-        return False
-    if not InchesToCm():
-        return False
-
 
 # Define miles to kilometers.
-def MilesToKm():
+def miles_to_km():
     i = 0
     while i < 3:
         miles = int(input('Enter a number for miles: '))
@@ -27,14 +12,14 @@ def MilesToKm():
             print("Value entered must be greater than zero!")
             i += 1
         else:
-            print('For every mile, there are', format(my_conversions.kilometers(miles), '.2f'), 'kilometers')
+            print('For every mile, there are', format(my_conversions.convert_kilometers(miles), '.2f'), 'kilometers')
             return True
     print("Too many tries! Program ending...")
     return False
 
 
 # Convert fahrenheit to celsius.
-def FahToCel():
+def f_to_c():
     i = 0
     while i < 3:
         fahrenheit = int(input('Enter a temp: '))
@@ -42,14 +27,14 @@ def FahToCel():
             print('Value entered must be less than 1000!')
             i += 1
         else:
-            print('Your new temp is', format(my_conversions.celsius(fahrenheit), '.2f'), "celsius.")
+            print('Your new temp is', format(my_conversions.convert_celsius(fahrenheit), '.2f'), "celsius.")
             return True
     print('Too many tries! Program ending...')
     return False
 
 
 # Convert gallons to liters.
-def GalToLit():
+def gal_to_lit():
     i = 0
     while i < 3:
         gallons = int(input('Enter a number of gallons: '))
@@ -57,14 +42,14 @@ def GalToLit():
             print('Value entered must be greater than zero!')
             i += 1
         else:
-            print('The number of gallons is equal to', format(my_conversions.liters(gallons), '.2f'), "liters.")
+            print('The number of gallons is equal to', format(my_conversions.convert_liters(gallons), '.2f'), "liters.")
             return True
     print('Too many tries! Program ending...')
     return False
 
 
 # Convert pounds to kilograms.
-def PoundsToKg():
+def lbs_to_kg():
     i = 0
     while i < 3:
         pounds = int(input('Enter a number of pounds: '))
@@ -72,14 +57,15 @@ def PoundsToKg():
             print('Value entered must be greater than zero!')
             i += 1
         else:
-            print('The number of liters is equal to', format(my_conversions.kilograms(pounds), '.2f'), 'kilograms.')
+            print('The number of liters is equal to', format(my_conversions.convert_kilograms(pounds), '.2f'),
+                  'kilograms.')
             return True
     print('Too many tries! Program ending...')
     return False
 
 
 # Convert inches to centimeters
-def InchesToCm():
+def in_to_cm():
     i = 0
     while i < 3:
         inches = int(input('Enter a number of inches: '))
@@ -87,10 +73,29 @@ def InchesToCm():
             print('Value entered must be greater than zero!')
             i += 1
         else:
-            print('The number of inches is equal to', format(my_conversions.centimeters(inches), '.2f'), 'centimeters.')
+            print('The number of inches is equal to', format(my_conversions.convert_centimeters(inches), '.2f'),
+                  'centimeters.')
             return True
     print('Too many tries! Program ending...')
     return False
 
+
 # Call main function.
-main()
+def main():
+    # Explain what the program does.
+    print("This program converts units.")
+    print("Please enter a number to be converted.")
+    if not miles_to_km():
+        return False
+    if not f_to_c():
+        return False
+    if not gal_to_lit():
+        return False
+    if not lbs_to_kg():
+        return False
+    if not in_to_cm():
+        return False
+
+
+if __name__ == "__main__":
+    main()

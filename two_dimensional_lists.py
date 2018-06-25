@@ -1,4 +1,5 @@
 import my_conversions
+
 # Constants for menu options.
 MILES_TO_KILOMETERS_CHOICE = 1
 FAHRENHEIT_TO_CELSIUS_CHOICE = 2
@@ -11,7 +12,7 @@ ROWS = 12
 COLS = 2
 
 
-def main():
+def get_values():
     # Create a two-dimensional list.
     values = [[0, 0],
               [0, 0],
@@ -104,4 +105,9 @@ def display_menu():
     print('6) Quit')
 
 
-main()
+def main():
+    get_values()
+
+
+if __name__ == "__main__":
+    main()
